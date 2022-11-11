@@ -1,0 +1,444 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Gugi&display=swap");
+
+@font-face {
+  font-family: "Madina";
+  src: url("../fonts/madina/Madina.otf");
+  font-size: normal;
+  font-weight: normal;
+  format: opentype;
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("../fonts/lemon_milk/LEMONMILK-Bold.otf");
+  font-size: normal;
+  font-weight: normal;
+  format: opentype;
+}
+
+:root {
+  --preto: #000000;
+  --azul: #14213d;
+  --amarelo: #fca311;
+  --cinza: #e5e5e5;
+  --branco: #ffffff;
+
+  --cursiva: "Madina", cursive;
+  --grande: "Lemon Milk", sans-serif;
+  --runica: "Gugi", cursive;
+  --principal: "Fredoka", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--principal);
+}
+
+.madina {
+  font-family: var(--cursiva);
+  font-weight: normal;
+}
+
+.lemon-milk {
+  font-family: var(--grande);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  align-items: center;
+}
+
+nav > h1 {
+  font-family: var(--runica);
+  font-size: 1.7em;
+}
+
+nav > h1,
+nav > span {
+  color: white;
+}
+
+menu {
+  text-align: center;
+  font-size: 1.1em;
+  display: none;
+}
+
+menu > ul > li {
+  padding: 16px;
+}
+
+menu > ul > li > a {
+  color: var(--branco);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 0.6s;
+}
+
+menu > ul > li > a:hover {
+  color: var(--amarelo);
+  text-decoration: underline;
+}
+
+/* Background azul DRY */
+nav,
+menu {
+  background-color: var(--azul);
+}
+
+div.apresentacao {
+  height: 100vh;
+  background: var(--azul) url("../imagens/telaInicial.jpg") no-repeat fixed
+    center top;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+div.apresentacao h1 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+
+div.apresentacao h1.madina {
+  font-weight: normal;
+}
+
+div.apresentacao h1.lemon-milk {
+  margin-top: -8px;
+}
+
+div.apresentacao > div.texto {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+a.link-quadrado {
+  padding: 16px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  text-align: center;
+  transition-duration: 0.7s;
+}
+
+div.apresentacao > a.link-quadrado:hover {
+  color: var(--azul);
+  background-color: white;
+  border-color: var(--azul);
+}
+
+div.apresentacao > a {
+  color: var(--branco);
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  border: 2px solid var(--branco);
+}
+
+section.categorias {
+  text-align: center;
+  position: relative;
+}
+
+section.categorias h1 {
+  font-size: 2.2em;
+}
+
+section.categorias > div.texto {
+  padding: 64px 0px;
+}
+
+section.categorias h1.madina {
+  color: var(--azul);
+  font-weight: normal;
+  font-size: 3.5em;
+}
+
+section.categorias h1.lemon-milk {
+  color: var(--preto);
+  margin-top: -22px;
+  letter-spacing: 4px;
+}
+
+section.categorias > p {
+  padding: 0px 48px;
+  font-size: 1.2em;
+  filter: opacity(47%);
+  margin-top: -32px;
+}
+
+.opcoes-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  letter-spacing: 2px;
+  justify-content: space-around;
+  color: var(--azul);
+  padding: 32px;
+}
+
+.opcoes-categorias > .cat {
+  width: 50%;
+  padding: 16px 0px;
+}
+
+.opcoes-categorias > .cat > a {
+  font-size: 0.9em;
+  display: block;
+}
+
+svg {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+svg path {
+  fill: var(--azul);
+}
+
+svg:hover path {
+  fill: var(--amarelo);
+  transition-duration: 0.7s;
+  color: var(--amarelo);
+}
+
+.desenho {
+  position: relative;
+  margin-top: -50px;
+}
+
+.triangulo-dentro {
+  display: block;
+  border-right: 50vw solid var(--amarelo);
+  border-bottom: 100px solid var(--amarelo);
+  border-left: 50vw solid transparent;
+  border-top: 100px solid transparent;
+  position: absolute;
+  margin-top: -20px;
+}
+
+.triangulo-fora {
+  display: block;
+  border-right: 50vw solid var(--azul);
+  border-bottom: 90px solid var(--azul);
+  border-left: 50vw solid transparent;
+  border-top: 90px solid transparent;
+  position: absolute;
+}
+
+section.sobre {
+  margin-top: 180px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.sobre > div.texto {
+  text-align: center;
+  font-size: 2em;
+  background-color: var(--azul);
+  color: white;
+  padding: 16px 0px 86px 0px;
+}
+
+section.sobre > div.texto > .lemon-milk {
+  margin-top: -14px;
+}
+
+section.sobre > div.triangulo-trapezio {
+  display: block;
+  border-right: 50vw solid var(--azul);
+  border-bottom: 40px solid transparent;
+  border-left: 50vw solid transparent;
+  border-top: 40px solid var(--azul);
+}
+
+section.biografia {
+  width: 85%;
+  border: 1px solid var(--azul);
+  border-collapse: collapse;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.biografia h2 {
+  padding: 32px 0px;
+  letter-spacing: 2px;
+  color: var(--azul);
+}
+
+section.biografia p {
+  font-size: 1.2em;
+  filter: opacity(47%);
+  padding: 0px 12px 32px 12px;
+}
+
+section.biografia img {
+  width: 100%;
+}
+
+div.icones {
+  border: 1px solid var(--azul);
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+}
+
+div.icones > svg {
+  width: 50px;
+  margin: 0;
+  margin: 0px 8px;
+}
+
+div.icones > svg:hover path {
+  fill: var(--azul);
+}
+
+a.botao-meio {
+  display: inline-block;
+  font-family: var(--grande);
+  padding: 12px;
+  border: 1px solid var(--azul);
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  color: var(--azul);
+  text-decoration: none;
+  text-align: center;
+  transition-duration: 0.7s;
+  margin: 0px auto;
+}
+
+section.sobre > a {
+  display: inline-block;
+  margin: 375px auto 32px auto;
+}
+
+section.explorando {
+  text-align: center;
+  padding: 32px 0px;
+}
+
+section.explorando img {
+  width: 90vw;
+  margin: auto;
+  display: block;
+}
+
+section.explorando h2 {
+  font-size: 2.2em;
+  text-align: center;
+  color: var(--azul);
+}
+
+section.explorando h2.lemon-milk {
+  letter-spacing: 4px;
+}
+
+section.explorando > div.topicos {
+  padding: 32px 0px;
+  text-align: left;
+}
+
+section.explorando div.topico {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+}
+
+section.explorando div.topico > h3 {
+  font-family: var(--grande);
+  font-size: 0.9em;
+  letter-spacing: 3px;
+  color: var(--azul);
+}
+
+section.explorando a.link-quadrado {
+  display: inline;
+  color: var(--azul);
+  border: 2px solid var(--azul);
+}
+
+section.explorando a.link-quadrado:hover,
+section.explorando a.botao-meio:hover,
+section.sobre > a:hover {
+  color: white;
+  background-color: var(--azul);
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+section.contato {
+  background-color: var(--azul);
+  text-align: center;
+}
+
+section.contato > div img {
+  width: 100vw;
+}
+
+section.contato > div div.desenho {
+  display: none;
+}
+
+section.contato > div.btn > a {
+  color: white;
+  border-color: white;
+  letter-spacing: 0px;
+  margin-top: 16px;
+}
+
+section.contato > div.btn > a:hover {
+  color: var(--amarelo);
+  border-color: var(--amarelo);
+}
+
+section.contato > div.email {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 64px 0px;
+}
+
+.icons-contato {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 32px;
+}
+
+.icons-contato path,
+.icons-contato svg {
+  fill: white;
+  width: 60px;
+  height: 60px;
+}
+
+footer {
+  font-size: 1.3em;
+  text-align: center;
+  background-color: var(--azul);
+  color: white;
+  padding: 48px 0px 32px 0px;
+  font-weight: normal;
+}

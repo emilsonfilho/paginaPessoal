@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+:root {
+  --preto: #000000;
+  --azul: #14213d;
+  --amarelo: #fca311;
+  --cinza: #e5e5e5;
+  --branco: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  nav > #btnMenu {
+    display: none;
+  }
+
+  menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  menu ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  menu ul:hover {
+    color: var(--amarelo);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  nav > #btnMenu {
+    display: none;
+  }
+
+  menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  menu ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  menu ul:hover {
+    color: var(--amarelo);
+  }
+
+  div.apresentacao {
+    background-image: url("../imagens/tela-inicial-m.png");
+  }
+
+  section.biografia a.botao-meio {
+    display: none;
+  }
+
+  div.topico > h3 {
+    padding: 0px 64px;
+  }
+
+  div.icons-contato {
+    justify-content: center;
+  }
+
+  div.icons-contato > a {
+    padding: 0px 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav > h1 {
+    margin: auto;
+    font-size: 2.5em;
+  }
+
+  div.apresentacao {
+    background-image: url("../imagens/telaInicial-pc.jpg");
+    background-position: center bottom;
+  }
+
+  div.apresentacao h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  div.opcoes-categorias {
+    justify-content: center;
+  }
+
+  div.opcoes-categorias > .cat {
+    width: 10%;
+    padding: 128px 0px;
+  }
+
+  section.biografia {
+    width: 50%;
+  }
+
+  section.explorando {
+    padding: 0px 350px;
+  }
+
+  section.explorando img {
+    display: none;
+  }
+
+  section.explorando div.topicos {
+    padding: 220px 0px 32px 0px;
+  }
+
+  a.botao-meio {
+    margin: 32px auto;
+  }
+
+  section.contato div img {
+    display: none;
+  }
+
+  section.contato > div div.desenho {
+    display: block;
+    margin-top: 0px;
+  }
+
+  div#desenho div#triangulo-dentro {
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid var(--amarelo);
+  }
+
+  div#desenho div#triangulo-fora {
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid var(--azul);
+  }
+
+  div.btn {
+    margin-top: 180px;
+  }
+
+  div.icons-contato {
+    justify-content: center;
+  }
+
+  div.icons-contato > a {
+    padding: 0px 32px;
+  }
+}

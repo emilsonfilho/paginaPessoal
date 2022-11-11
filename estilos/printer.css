@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@media print {
+  body::after {
+    content: "Impressão projetada por Emilson Filho";
+  }
+
+  nav,
+  img,
+  a.botao-meio,
+  section.sobre > div.triangulo-trapezio,
+  section.sobre > a,
+  section.explorando picture {
+    display: none;
+  }
+
+  section.sobre {
+    padding: 128px 0px 387px 0px;
+  }
+
+  section.sobre > div.texto {
+    padding-top: 64px;
+  }
+
+  section.sobre > section.biografia {
+    position: relative !important;
+  }
+
+  section.explorando {
+    padding-top: 256px;
+  }
+}
