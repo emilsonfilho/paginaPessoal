@@ -38,6 +38,10 @@
   font-family: var(--principal);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .madina {
   font-family: var(--cursiva);
   font-weight: normal;
@@ -381,7 +385,6 @@ section.explorando a.link-quadrado {
 }
 
 section.explorando a.link-quadrado:hover,
-section.explorando a.botao-meio:hover,
 section.sobre > a:hover {
   color: white;
   background-color: var(--azul);
