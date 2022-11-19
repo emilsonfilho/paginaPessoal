@@ -36,7 +36,7 @@
 				<h1 class="lemon-milk">Pessoal</h1>
 			</div> <!-- Fecha .texto -->
 
-			<a href="#" class="link-quadrado" data-aos="fade-right">&darr;</a>
+			<a href="#contato" class="link-quadrado" data-aos="fade-right">&darr;</a>
 		</div><!-- Fecha .apresentacao -->
 	</div><!-- Fecha .inicio -->
 	<section class="categorias" data-aos="fade-top">
@@ -598,13 +598,10 @@ m480 0 l0 -240 -160 0 -160 0 0 240 0 240 160 0 160 0 0 -240z" />
 			</div>
 			<hr>
 		</div>
-		<a href="#" class="botao-meio" data-aos="fade-bottom">Ir até <br>tópicos</a>
+
 	</section>
-	<div class="desenho" id="desenho">
-		<div class="triangulo-dentro" id="triangulo-dentro"></div>
-		<div class="triangulo-fora" id="triangulo-fora"></div>
-	</div>
-	<section class="contato">
+
+	<section class="contato" id="contato">
 		<div>
 			<picture>
 				<source media="(max-width: 750px)" srcset="imagens/fundo-meu-trabalho-p.jpg">
@@ -745,6 +742,18 @@ c-200 30 -516 23 -657 -14 l-53 -14 -80 48 c-188 113 -373 160 -430 109z m203
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init({duration: 1000});
+	</script>
+	<script src="scripts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	  $('a[href^="#"]').on('click', function(e) {
+  e.preventDefault();
+  var id = $(this).attr('href'),
+  targetOffset = $(id).offset().top;
+    
+  $('html, body').animate({ 
+    scrollTop: targetOffset - 100
+  }, 500);
+});
 	</script>
 </body>
 
